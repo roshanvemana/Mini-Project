@@ -1,6 +1,10 @@
 import streamlit as st
-from arima import show_predict_page
+from predict import show_predict_page
+from explore import show_explore_page
 
-st.sidebar.selectbox("Choose Your Model", ("AIMA", "LTSM"))
+page = st.sidebar.selectbox("Explore or Predict", ("Predict", "Explore"))
 
-show_predict_page()
+if page == 'Predict':
+    show_predict_page()
+else:
+    show_explore_page()
