@@ -62,6 +62,8 @@ def price_predictor_us(startdate, enddate, specificdate):
   plt.ylabel('Price')
   plt.legend()
   plt.show()
+
+  
 ############################################################################################################
 
 #FOR INDIA
@@ -322,7 +324,7 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"$"+str(price_predictor_us(startDate, endDate, specificdate)))
       else:
@@ -341,7 +343,7 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"₹"+str(price_predictor_ind(startDate, endDate, specificdate)))
       else:
@@ -360,7 +362,7 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"$"+str(price_predictor_aus(startDate, endDate, specificdate)))
       else:
@@ -379,7 +381,7 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"₽"+str(price_predictor_rus(startDate, endDate, specificdate)))
       else:
@@ -398,7 +400,7 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"£"+str(price_predictor_uk(startDate, endDate, specificdate)))
       else:
@@ -417,11 +419,8 @@ def show_predict_page():
       else:
         st.write('Hit Button to See Prediction')
 
-      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,8,25),min_value=datetime.datetime.now())
+      specificdate = st.date_input("Select A Day for price prediction", value=datetime.datetime(2022,11,11),min_value=datetime.datetime.now())
       if st.button('Get Price'):
         st.write("The predicted price is "+" "+"₩"+str(price_predictor_k(startDate, endDate, specificdate)))
       else:
         st.write('Hit Button to See Price')
-
-      
-    

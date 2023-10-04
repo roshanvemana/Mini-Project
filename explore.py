@@ -17,7 +17,6 @@ df_aus = yf.download('BTC-AUD')
 def show_explore_page():
     st.title('Explore Bitcoin Data')
     st.write("""### Select a country and desired time line""")
-
     countries = [
         'AUSTRALIA',    #aud
         'INDIA',        #inr
@@ -26,18 +25,17 @@ def show_explore_page():
         'USA',          #usd
         'UNITED KINGDOM'#gbp
     ]
-
+    
     country = st.selectbox("Country", countries)
     startDate = st.date_input("Select Start Date", value=datetime.datetime(2022,8,10),min_value=datetime.datetime(2014,9,17))
     endDate = st.date_input("Select End Date", value=datetime.datetime(2022,8,23),min_value=datetime.datetime(2014,9,17))
-    
     startDate = date(int(startDate.strftime("%Y")), int(startDate.strftime("%m")), int(startDate.strftime("%d")))
     endDate = date(int(endDate.strftime("%Y")), int(endDate.strftime("%m")), int(endDate.strftime("%d")))
     #converting date to datetime for comparison
     #df.index is of type datetime64
     startDate = datetime.datetime(startDate.year, startDate.month, startDate.day)
     endDate = datetime.datetime(endDate.year, endDate.month, endDate.day)
-    
+
     #data specific to countries
     if country == 'USA':
         if st.button('Explore'):
